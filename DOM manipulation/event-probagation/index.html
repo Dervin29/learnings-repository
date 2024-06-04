@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: grey;
+      }
+      .main-heading{
+        text-align: center;
+        color: white;
+      }
+      .container{
+        display: grid;
+        place-content: center;
+        height: 100vh;
+      }
+      .div1,
+      .div2,
+      .btn{
+        padding: 50px;
+        border: solid 1px white;
+        color: white;
+      }
+
+      .btn{
+        color: grey;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="main-heading">Event Propagation</h1>
+      <div class="div2">
+        2
+        <div class="div1">
+          1
+          <button class="btn">Button</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

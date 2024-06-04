@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: grey;
+        }
+
+        .main-heading{
+            text-align: center;
+            color: white;
+            margin: 0;
+        }
+
+        .container{
+            display: grid;
+            place-content: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            height: 100vh;
+            padding: 2rem;
+        }
+
+        .reveal-btn{
+            padding: 20px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .hidden-content{
+            display: none;
+        }
+
+        .hidden-content.reveal-btn{
+            display: block;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="main-heading">Event Handling Example</h1>
+      <button class="reveal-btn">Reveal button</button>
+      <div class="hidden-content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt provident
+        temporibus ipsam culpa accusantium ad, officiis necessitatibus porro ut,
+        quas eveniet dolorem aut aliquid autem, nisi error fugit rem! Iste!
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
