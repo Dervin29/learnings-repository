@@ -19,21 +19,21 @@ let timerInterval = null;
 let timerStatus = "stopped";
 
 // stop watch function
-
 function stopWatch(){
 
     sec++
-
+    //if seconds = 60 then change seconds to 0 and add 1 to minutes
     if (sec /60 === 1){
         sec = 0;
         min++;
-
+        //if minutes = 60 then change minutes to 0 and add 1 to hours
         if(min / 60 === 1){
             min = 0;
             hr++;
         }
     }
 
+    //if seconds < 10 then add a leading 0 else display the seconds, similarly for minutes and hours
     if( sec < 10){
         leadingSec = "0"+ sec.toString();
     }
@@ -57,6 +57,7 @@ function stopWatch(){
     }
 
     let displayTimer;
+    //to display the timer
     displayTimer = document.getElementById('timer').innerText = 
     leadingHr + ":" + leadingMin + ":" + leadingSec;
 }
@@ -68,12 +69,15 @@ startStopBtn.addEventListener('click', function(){
     if(timerStatus === "stopped"){
         //time interval set to 1 second
         timerInterval = window.setInterval(stopWatch,1000);
+        //and change the button text to pause
         document.getElementById('startStopBtn').innerHTML = `
         <p id="pause">PAUSE</p>`;
         timerStatus = "started";
     }
     else{
+        //else pause the timer
         window.clearInterval(timerInterval);
+        //and change the button text to play
         document.getElementById('startStopBtn').innerHTML =`
         <p id="play">PLAY</p>`;
         timerStatus="stopped";
