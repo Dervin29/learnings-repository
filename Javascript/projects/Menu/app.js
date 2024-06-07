@@ -82,6 +82,8 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//dataset property allows you to access custom data attributes (data-*) on an element. 
+
 //filtering the menu items based on category
 filterBtn.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
