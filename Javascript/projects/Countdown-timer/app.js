@@ -57,6 +57,7 @@ const futureTime = futureDate.getTime();
 
 function getRemainingTime(){
     const today = new Date().getTime();
+    //t is calculated by subtracting the future time from the current time to get the remaining time
      const t = futureTime - today; 
     //  console.log(t);
 
@@ -68,6 +69,8 @@ function getRemainingTime(){
 
      //calculate all values
      let days = t / oneDay;
+     // the value of t is in ms so we need to convert it to days
+     //similarly we can convert hours, minutes and seconds
      days = Math.floor(days);
      let hours = Math.floor((t % oneDay) / oneHour);
      let minutes = Math.floor((t % oneHour) / oneMinute);
@@ -84,10 +87,12 @@ function getRemainingTime(){
          return item
      }
 
+     //for each function to loop through the array
      items.forEach(function(item, index){
          item.innerHTML = format(values[index]);
      });
 
+     //when t is less than zero we will stop the countdown
      if(t<0){
          clearInterval(countdown);
          deadline.innerHTML = `<h4 class="expired">sorry, this giveaway has expired</h4>`

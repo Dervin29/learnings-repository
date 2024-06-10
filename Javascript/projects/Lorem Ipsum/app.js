@@ -16,8 +16,10 @@ const form = document.querySelector(".lorem-form");
 const amount = document.getElementById("amount");
 const result = document.querySelector(".lorem-text");
 
+//event listener to form submit
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  //parsing the value to integer on submission 
   const value = parseInt(amount.value);
   const random = Math.floor(Math.random() * text.length);
 
