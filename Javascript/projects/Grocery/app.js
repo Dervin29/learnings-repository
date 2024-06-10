@@ -57,8 +57,9 @@ function addItem(e) {
 
 
 function editItem(e) {
+    //we are targeting the parent element of the edit button
   const element = e.currentTarget.parentElement.parentElement;
-  //set edit item
+  //we are setting edit item to the current element
   editElement = e.currentTarget.parentElement.previousElementSibling;
   //set form value
   grocery.value = editElement.innerHTML;
@@ -179,7 +180,7 @@ function createListItem(id, value) {
   element.classList.add("grocery-item");
   //add id
   const attr = document.createAttribute("data-id");
-  //assign id
+  //assign id 
   attr.value = id;
   //set attribute to element
   element.setAttributeNode(attr);
