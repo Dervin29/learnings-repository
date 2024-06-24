@@ -1,6 +1,7 @@
 import React, { useId } from 'react';
 
 export function InputBox({
+    //passing props
     label,
     amount,
     onAmountChange,
@@ -11,6 +12,7 @@ export function InputBox({
     currencyDisable = false,
     className = "",
 }) {
+    //useId is used to generate unique ids for input elements to avoid duplicate ids
     const amountInputId = useId();
 
     return (
